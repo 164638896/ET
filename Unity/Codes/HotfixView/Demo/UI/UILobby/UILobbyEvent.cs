@@ -1,4 +1,5 @@
 ﻿using System;
+using ET.Module;
 using UnityEngine;
 
 namespace ET
@@ -9,8 +10,9 @@ namespace ET
         public override async ETTask<UI> OnCreate(UIComponent uiComponent, UILayer uiLayer)
         {
             await ETTask.CompletedTask;
-            await uiComponent.Domain.GetComponent<ResourcesLoaderComponent>().LoadAsync(UIType.UILobby.StringToAB());
-            GameObject bundleGameObject = (GameObject) ResourcesComponent.Instance.GetAsset(UIType.UILobby.StringToAB(), UIType.UILobby);
+            //await uiComponent.Domain.GetComponent<ResourcesLoaderComponent>().LoadAsync(UIType.UILobby.StringToAB());
+            //GameObject bundleGameObject = (GameObject) ResourcesComponent.Instance.GetAsset(UIType.UILobby.StringToAB(), UIType.UILobby);
+            GameObject bundleGameObject = await AddressablesCache.LoadAssetAsync<GameObject>(UIType.UILobby);
             GameObject gameObject = UnityEngine.Object.Instantiate(bundleGameObject, UIEventComponent.Instance.UILayers[(int)uiLayer]);
             UI ui = uiComponent.AddChild<UI, string, GameObject>(UIType.UILobby, gameObject);
 

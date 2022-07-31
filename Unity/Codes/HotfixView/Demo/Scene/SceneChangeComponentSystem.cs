@@ -1,26 +1,27 @@
-﻿using UnityEngine.SceneManagement;
+﻿using ET.Module;
+using UnityEngine.SceneManagement;
 
 namespace ET
 {
-    public class SceneChangeComponentUpdateSystem: UpdateSystem<SceneChangeComponent>
-    {
-        public override void Update(SceneChangeComponent self)
-        {
-            if (!self.loadMapOperation.isDone)
-            {
-                return;
-            }
-
-            if (self.tcs == null)
-            {
-                return;
-            }
-            
-            ETTask tcs = self.tcs;
-            self.tcs = null;
-            tcs.SetResult();
-        }
-    }
+    // public class SceneChangeComponentUpdateSystem: UpdateSystem<SceneChangeComponent>
+    // {
+    //     public override void Update(SceneChangeComponent self)
+    //     {
+    //         if (!self.loadMapOperation.isDone)
+    //         {
+    //             return;
+    //         }
+    //
+    //         if (self.tcs == null)
+    //         {
+    //             return;
+    //         }
+    //         
+    //         ETTask tcs = self.tcs;
+    //         self.tcs = null;
+    //         tcs.SetResult();
+    //     }
+    // }
 	
     
     public class SceneChangeComponentDestroySystem: DestroySystem<SceneChangeComponent>
@@ -37,11 +38,12 @@ namespace ET
     {
         public static async ETTask ChangeSceneAsync(this SceneChangeComponent self, string sceneName)
         {
-            self.tcs = ETTask.Create(true);
+            //self.tcs = ETTask.Create(true);
             // 加载map
-            self.loadMapOperation = SceneManager.LoadSceneAsync(sceneName);
+            //self.loadMapOperation = SceneManager.LoadSceneAsync(sceneName);
+            await AddressablesCache.LoadSceneAsync(sceneName);
             //this.loadMapOperation.allowSceneActivation = false;
-            await self.tcs;
+            //await self.tcs;
         }
         
         public static int Process(this SceneChangeComponent self)

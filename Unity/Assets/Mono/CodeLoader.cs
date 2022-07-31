@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 using System.Linq;
+using ET.Module;
 
 namespace ET
 {
@@ -62,14 +63,17 @@ namespace ET
 			{
 				case CodeMode.Mono:
 				{
-					(AssetBundle assetsBundle, Dictionary<string, UnityEngine.Object> dictionary) = AssetsBundleHelper.LoadBundle("code.unity3d");
-					byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
-					byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
+					// (AssetBundle assetsBundle, Dictionary<string, UnityEngine.Object> dictionary) = AssetsBundleHelper.LoadBundle("code.unity3d");
+					// byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
+					// byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
 					
-					if (assetsBundle != null)
-					{
-						assetsBundle.Unload(true);	
-					}
+					// if (assetsBundle != null)
+					// {
+					// 	assetsBundle.Unload(true);	
+					// }
+					
+					byte[] assBytes = AddressablesCache.LoadAsset<TextAsset>("Code.dll").bytes;
+					byte[] pdbBytes = AddressablesCache.LoadAsset<TextAsset>("Code.pdb").bytes;
 					
 					assembly = Assembly.Load(assBytes, pdbBytes);
 					foreach (Type type in this.assembly.GetTypes())
@@ -83,14 +87,17 @@ namespace ET
 				}
 				case CodeMode.ILRuntime:
 				{
-					(AssetBundle assetsBundle, Dictionary<string, UnityEngine.Object> dictionary) = AssetsBundleHelper.LoadBundle("code.unity3d");
-					byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
-					byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
+					// (AssetBundle assetsBundle, Dictionary<string, UnityEngine.Object> dictionary) = AssetsBundleHelper.LoadBundle("code.unity3d");
+					// byte[] assBytes = ((TextAsset)dictionary["Code.dll"]).bytes;
+					// byte[] pdbBytes = ((TextAsset)dictionary["Code.pdb"]).bytes;
 					
-					if (assetsBundle != null)
-					{
-						assetsBundle.Unload(true);	
-					}
+					// if (assetsBundle != null)
+					// {
+					// 	assetsBundle.Unload(true);	
+					// }
+					
+					byte[] assBytes = AddressablesCache.LoadAsset<TextAsset>("Code.dll").bytes;
+					byte[] pdbBytes = AddressablesCache.LoadAsset<TextAsset>("Code.pdb").bytes;
 					
 					//byte[] assBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.dll"));
 					//byte[] pdbBytes = File.ReadAllBytes(Path.Combine("../Unity/", Define.BuildOutputDir, "Code.pdb"));

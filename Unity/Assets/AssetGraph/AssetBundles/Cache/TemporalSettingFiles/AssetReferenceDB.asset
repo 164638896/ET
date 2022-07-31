@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
+  m_Name: AssetReferenceDB
+  m_EditorClassIdentifier: 
+  m_assets:
+  - m_assetDatabaseId: 74e9ad4b31108ec469d315fdfaf4bc2a
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2d06e8cf45c18764db16886c76475f5e
+    m_importFrom: Assets/Mono/CodeLoader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 94924b6928ea8bf4abd50220f9cca5b1
+    m_importFrom: Assets/Bundles/Code/Code.pdb.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fab57e7627dad94428216e9c1455e20d
+    m_importFrom: Assets/Bundles/Code/Code.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c54e8d9624286b24fa23519e5df2ed0a
+    m_importFrom: Assets/Bundles/UI/UIHelp.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d8d87e53d93e234448658c9a801a9967
+    m_importFrom: Assets/Bundles/UI/UILobby.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f6d9adc6f537764fa0fea29671e77bf
+    m_importFrom: Assets/Bundles/UI/UILogin.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 277d58db3067742a7b32f9994984b3bc
+    m_importFrom: Assets/Bundles/Config/AIConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 40aebe92b34144ab187964caf41b2104
+    m_importFrom: Assets/Bundles/Config/StartMachineConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f62068aa635af4f189781cb7900fa538
+    m_importFrom: Assets/Bundles/Config/StartProcessConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f5aaffc264fbd427f907e6180178fa65
+    m_importFrom: Assets/Bundles/Config/StartSceneConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2f76d9d7f3caf49b89a8292eb2ee302c
+    m_importFrom: Assets/Bundles/Config/StartZoneConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f452063ceb5f4150bbbfe795c0aca90
+    m_importFrom: Assets/Bundles/Config/UnitConfigCategory.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfaf4529ce2243c4c85126e9d008897b
+    m_importFrom: Assets/Bundles/Unit/Unit.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0d691ac8c1d0454ba07089ea820e18a
+    m_importFrom: Assets/Scenes/Init.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1ba6771e5d8abc6449e944314b0c77df
+    m_importFrom: Assets/Scenes/Map1/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eeeb8730251ee1b469b9b070c7efb1cf
+    m_importFrom: Assets/Scenes/Map1/Lightmap-0_comp_dir.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ab3027117b6819848bae7b1746588d06
+    m_importFrom: Assets/Scenes/Map1/Lightmap-0_comp_light.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02bc6af578f699249a101b704d189b5a
+    m_importFrom: Assets/Scenes/Map1/ReflectionProbe-0.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5294483f20f40d449699101bb428cda
+    m_importFrom: Assets/Scenes/Map1.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4836a445dcf1a044d90ff116828a0704
+    m_importFrom: Assets/Scenes/Map1Settings.lighting
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7b86a45dc154ae40a2f51144799b7bf
+    m_importFrom: Assets/Scenes/Map2/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 62a71c4ca03e7434ca6ff4bba65ffb45
+    m_importFrom: Assets/Scenes/Map2/Lightmap-0_comp_dir.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d7da8dd669b0d8488a81fcb41451b21
+    m_importFrom: Assets/Scenes/Map2/Lightmap-0_comp_light.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1f1694b2c0d992047b551ad028dd5347
+    m_importFrom: Assets/Scenes/Map2/ReflectionProbe-0.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 064123f1e5067b249a9fd8967ddbde09
+    m_importFrom: Assets/Scenes/Map2.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c78b5af2c87902e4aba73014819bd1a7
+    m_importFrom: Assets/Scenes/Map2Settings.lighting
+    m_exportTo: 
+    m_variantName: 
+  m_version: 2
